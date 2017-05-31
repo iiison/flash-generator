@@ -1,16 +1,29 @@
-import chalk  from 'chalk'
-import clear  from 'clear'
-import figlet from 'figlet'
+#!/usr/bin/env node
 
-import cloneFlash from './lib/cloneFlash'
+"use strict";
 
-clear()
+const _          = require('lodash');
+const chalk      = require('chalk');
+const clear      = require('clear');
+const figlet     = require('figlet');
+const path       = require('path');
+const argv       = require('minimist')(process.argv.slice(2));
+
+const confs      = require('./bin/commands-conf');
+
+let commands;
+
+clear();
 
 console.log(chalk.green(
   figlet.textSync('Flash', {
     horizontalLayout : 'default',
     font : 'Doh'
   })
-))
+));
 
-cloneFlash()
+commands = argv['_'];
+
+if (commands && commands.length > 0) {
+  confs[_.camelCase(commands[0])]()
+}
