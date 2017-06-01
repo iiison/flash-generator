@@ -1,0 +1,28 @@
+import controller from '$js/Controller'
+
+/**
+ * Get DummyData
+ * @return {Promise} User data promise
+ */
+function dummyFunction() {
+  // Generate modal from flash-generator or write one by yourself
+  return new Promise;
+}
+
+
+/**
+ * Setup login page data, call user data for the first time
+ * @return {[type]} [description]
+ */
+function setupPageData() {
+  return Promise.all([dummyFunction()])
+    .then((response) => {
+      controller.model.set('%viewName%Page', response[0].data.data)
+    })
+}
+
+const %viewName% = {
+  setupPageData
+}
+
+export default %viewName%
