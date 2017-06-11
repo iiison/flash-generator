@@ -29,8 +29,7 @@ if (commands && commands.length > 0) {
   if (convertedCommand && typeof confs[convertedCommand] === 'function') {
     confs[convertedCommand]()
   } else {
-    console.log(chalk.red('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'));
-    console.log(`⚔  ${commands[0]} is not a valid command. Please try "generate-page"`);
-    console.log(chalk.red('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'));
+    console.log(chalk.red(`\n  😵   ${commands[0]} is not a valid command.`));
+    console.log(chalk.blue('\n  🤔  Did you mean \'generate-page\'❓ \n\n'));
   }
 }
