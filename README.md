@@ -7,7 +7,7 @@ Currently it has very basic 2 commands:
 
 ### Setup new project
 To setup a new project using Flash.
-```shell
+```
 $ flash generate
 ? Enter the project's name(you can also pass the template name with `-n` flag) (test) [enter the name of the project]
 ```
@@ -17,7 +17,7 @@ $ flash generate
 ### Generate new page
 To generate the code for a new page. As every framework, to add a new page, you have to add code at a lot of places(which is very frustrating 😬). `generate-page` command will ask few simple question and add the page code accordingly. 
 
-```shell
+```
 $ flash generate-page -v [viewName]
 ? Enter a route for this page :  (defaultValue)
 ? Enter template name for the page : (defaultValue)
