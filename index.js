@@ -24,7 +24,7 @@ console.log(chalk.green(
 
 commands = argv['_'];
 
-if (commands && commands.length > 0) {\
+if (commands && commands.length > 0) {
   let convertedCommand = _.camelCase(commands[0]);
   if (convertedCommand && typeof confs[convertedCommand] === 'function') {
     confs[convertedCommand]()
