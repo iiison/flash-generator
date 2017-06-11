@@ -24,6 +24,13 @@ console.log(chalk.green(
 
 commands = argv['_'];
 
-if (commands && commands.length > 0) {
-  confs[_.camelCase(commands[0])]()
+if (commands && commands.length > 0) {\
+  let convertedCommand = _.camelCase(commands[0]);
+  if (convertedCommand && typeof confs[convertedCommand] === 'function') {
+    confs[convertedCommand]()
+  } else {
+    console.log(chalk.red('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'));
+    console.log(`⚔  ${commands[0]} is not a valid command. Please try "generate-page"`);
+    console.log(chalk.red('░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'));
+  }
 }
