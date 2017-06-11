@@ -19,10 +19,10 @@ To generate the code for a new page. As every framework, to add a new page, you 
 
 ```shell
 $ flash generate-page -v [viewName]
-        ? Enter a route for this page :  (defaultValue)
-        ? Enter template name for the page : (defaultValue)
-        ? Shall I generate CSS file for the template? : (Y/n)
-        ? Enter template name for the CSS? : (defaultName)
+? Enter a route for this page :  (defaultValue)
+? Enter template name for the page : (defaultValue)
+? Shall I generate CSS file for the template? : (Y/n)
+? Enter template name for the CSS? : (defaultName)
 ```
 
 
