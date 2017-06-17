@@ -6,7 +6,13 @@ import controller from '$js/Controller'
  */
 function dummyFunction() {
   // Generate modal from flash-generator or write one by yourself
-  return new Promise;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        data : []
+      })
+    })
+  })
 }
 
 
@@ -17,7 +23,7 @@ function dummyFunction() {
 function setupPageData() {
   return Promise.all([dummyFunction()])
     .then((response) => {
-      controller.model.set('%viewName%Page', response[0].data.data)
+      controller.model.set('%viewName%Page', response[0].data)
     })
 }
 
