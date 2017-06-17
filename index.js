@@ -30,6 +30,6 @@ if (commands && commands.length > 0) {
     confs[convertedCommand]()
   } else {
     console.log(chalk.red(`\n  😵   ${commands[0]} is not a valid command.`));
-    console.log(chalk.blue('\n  🤔  Did you mean \'generate-page\'❓ \n\n'));
+    console.log(chalk.blue('\n  🤔   Did you mean \'generate-page\'❓ \n\n'));
   }
 }
