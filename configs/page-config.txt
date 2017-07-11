@@ -1,12 +1,21 @@
 import controller from '$js/Controller'
 
+// Dummy time
+const TIME = 1000
+
 /**
  * Get DummyData
  * @return {Promise} User data promise
  */
 function dummyFunction() {
   // Generate modal from flash-generator or write one by yourself
-  return new Promise;
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        value : 4
+      })
+    }, TIME)
+  })
 }
 
 
@@ -17,7 +26,7 @@ function dummyFunction() {
 function setupPageData() {
   return Promise.all([dummyFunction()])
     .then((response) => {
-      controller.model.set('%viewName%Page', response[0].data.data)
+      controller.model.set('%viewName%Page', response)
     })
 }
 
